@@ -17,8 +17,10 @@ function RTE({name, control,label, defaultValue= ""}) {
              apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
                 init={{
                     initialValue: defaultValue,
-                    height: 500,
+                    height: 300,
+                    min_height: 220,
                     menubar: true,
+                    toolbar_mode: 'wrap',
                     plugins: [
                         "image",
                         "advlist",
@@ -42,8 +44,12 @@ function RTE({name, control,label, defaultValue= ""}) {
                         "anchor",
                     ],
                     toolbar:
-                    "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
-                    content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
+                    "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help",
+                    content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:1.6; } img { max-width: 100%; height: auto; }",
+                    mobile: {
+                        toolbar: 'undo redo | bold italic | bullist numlist | link image | fullscreen',
+                        toolbar_mode: 'floating'
+                    }
                 }}
                 onEditorChange={onChange}
                     />
