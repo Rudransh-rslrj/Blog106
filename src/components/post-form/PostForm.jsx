@@ -129,7 +129,7 @@ function PostForm({ post }) {
         >
 
 
-            <div className="w-2/3 px-2">
+            <div className="w-full px-2 lg:w-2/3">
 
                 <Input
                     label="Title :"
@@ -170,7 +170,7 @@ function PostForm({ post }) {
 
       
 
-            <div className="w-1/3 px-2">
+            <div className="w-full px-2 lg:w-1/3">
 
                 <Input
                     label="Featured Image :"
