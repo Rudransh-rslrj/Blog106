@@ -53,5 +53,3 @@ npm run build
 
 - If images show a 403 error about transformations, ensure `getFilePreview` in `src/appwrite/config.js` uses `getFileView` (no transform params). This project already applies that change.
 - If posts do not appear, verify the `status` field in your rows is `active` (the app filters by Query.equal('status','active')).
-
-If you want a different default color scheme or centralized tokens, I can add a small `src/styles/tokens.css` or Tailwind config change.
